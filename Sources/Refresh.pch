@@ -1,0 +1,41 @@
+//
+//  Refresh.pch
+//  Refresh
+//
+//  Created by Jack on 2018/5/23.
+//  Copyright © 2018 XWJACK. All rights reserved.
+//
+
+#ifndef Refresh_pch
+#define Refresh_pch
+#import <Foundation/Foundation.h>
+/// Refresh Block
+typedef void (^RefreshBlock)(void);
+
+/**
+ Refresh status
+ 
+ - RefreshStateNormal: Normal
+ - RefreshStateWillRefresh: Will refresh
+ - RefreshStateRefreshing: Refreshing
+ - RefreshStateNoMoreData: No more data(footer)
+ */
+typedef NS_ENUM(NSInteger, RefreshState) {
+    RefreshStateNormal = 1,
+    RefreshStateWillRefresh,
+    RefreshStateRefreshing,
+    RefreshStateNoMoreData
+};
+
+/**
+ Refresh Direction
+ 
+ - RefreshDirectionVertical: Vertical
+ - RefreshDirectionHorizontal: Horizontal
+ */
+typedef NS_ENUM(NSInteger, RefreshDirection) {
+    RefreshDirectionVertical,
+    RefreshDirectionHorizontal
+};
+
+#endif /* Refresh_pch */
